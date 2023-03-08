@@ -1,0 +1,62 @@
+var edad = [33, 15, 27, 40, 22];
+void myFunction() {
+// sort array
+  var numItems = edad.length;
+  edad.sort();
+// obtain promedio
+  var sumTotal = edad.reduce((current, next) => current + next);
+  var promedio = sumTotal / numItems;
+  print('La edad mayor es: ${edad[numItems - 1]}');
+  print('La edad menor es: ${edad[0]}');
+  print('La edad promedio es: ${promedio}');
+}
+
+void main() {
+  //1
+  for (var i = 1; i <= 10; i++) {
+    print(i);
+  }
+
+  //2
+  final double PI = 3.14159265359;
+  double radius = 5.0;
+  double area = PI * radius * radius;
+  print("El área del círculo es: $area");
+
+  //3
+  List numeros = [5, 8, 10, 2, 7];
+  double suma = 0;
+  for (var num in numeros) {
+    suma += num;
+  }
+  double promedio = suma / numeros.length;
+  print("El promedio es: $promedio");
+
+  //4
+  List numeros1 = [5, 8, 10, 2, 7];
+  int mayor = numeros1[0];
+  for (var i = 1; i < numeros1.length; i++) {
+    if (numeros1[i] > mayor) {
+      mayor = numeros1[i];
+    }
+  }
+  print("El número mayor es: $mayor");
+
+  //5
+  String palabra = "Reconocer";
+  bool esPalindromo = true;
+  for (var i = 0; i < palabra.length ~/ 2; i++) {
+    if (palabra[i] != palabra[palabra.length - i - 1]) {
+      esPalindromo = false;
+      break;
+    }
+  }
+  if (esPalindromo) {
+    print("$palabra es un palíndromo");
+  } else {
+    print("$palabra no es un palíndromo");
+  }
+
+  //6
+  myFunction();
+}
